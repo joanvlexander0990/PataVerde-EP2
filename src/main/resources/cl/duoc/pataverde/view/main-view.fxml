@@ -1,0 +1,49 @@
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="cl.duoc.pataverde.controller.MainController"
+      alignment="CENTER"
+      spacing="15"
+      prefWidth="750"
+      prefHeight="500"
+      style="-fx-padding: 20;">
+
+    <Label text="Clinica Veterinaria PataVerde"
+           style="-fx-font-size: 24px; -fx-font-weight: bold;"/>
+
+    <Label text="Registro de mascotas"/>
+
+    <TextField fx:id="campoBuscar"
+               promptText="Buscar mascota por nombre o tipo"/>
+
+    <TableView fx:id="tablaMascotas"
+               prefHeight="300">
+
+        <columns>
+            <TableColumn fx:id="columnaNombre"
+                         text="Nombre"
+                         prefWidth="250"/>
+
+            <TableColumn fx:id="columnaTipo"
+                         text="Tipo"
+                         prefWidth="200"/>
+
+            <TableColumn fx:id="columnaEdad"
+                         text="Edad"
+                         prefWidth="150"/>
+        </columns>
+
+    </TableView>
+
+    <Button text="Registrar mascota"
+            onAction="#abrirRegistro"/>
+
+    <Button text="Eliminar mascota"
+            onAction="#eliminarMascota"/>
+
+    <Label fx:id="mensaje"
+           text="Bienvenido a PataVerde"/>
+
+</VBox>

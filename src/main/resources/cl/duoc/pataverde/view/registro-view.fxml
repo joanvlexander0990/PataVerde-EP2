@@ -1,0 +1,46 @@
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="cl.duoc.pataverde.controller.RegistroController"
+      alignment="CENTER_LEFT"
+      spacing="12"
+      prefWidth="420"
+      prefHeight="480"
+      style="-fx-padding: 25;">
+
+    <Label text="Registrar mascota"
+           style="-fx-font-size: 22px; -fx-font-weight: bold;"/>
+
+    <Label text="Tipo de mascota"/>
+    <ComboBox fx:id="comboTipo"
+              promptText="Seleccionar tipo"
+              prefWidth="350"/>
+
+    <Label text="Nombre"/>
+    <TextField fx:id="campoNombre"
+               promptText="Ejemplo: Toby"/>
+
+    <Label text="Edad"/>
+    <TextField fx:id="campoEdad"
+               promptText="Edad entre 0 y 30"/>
+
+    <Label text="Peso (kg)"/>
+    <TextField fx:id="campoPeso"
+               promptText="Ejemplo: 8.5"/>
+
+    <Label text="Raza (solo perros)"/>
+    <TextField fx:id="campoRaza"
+               promptText="Ejemplo: Labrador"/>
+
+    <CheckBox fx:id="checkCondicion"
+              text="Vacunado (perro) / Vive en exterior (gato)"/>
+
+    <Button text="Guardar mascota"
+            fx:id="botonGuardar"/>
+
+    <Label fx:id="mensajeRegistro"
+           wrapText="true"/>
+
+</VBox>
